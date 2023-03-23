@@ -40,14 +40,15 @@ After completion of the project there will be a fully functional checkout system
 ### 1. Pricing rules
 
   The structuring of pricing rules has been done in generic way.
-  To make this pricing rule generic there is offerTpe and offer(details of the offer)
+  To make this pricing rule generic there is offerTpe and offer(details of the offer).
+
   OfferType can be of 2 types
   - BULK_DISCOUNT
   - QUANTITY_DISCOUNT
 
   In case of `BULK_DISCOUNT` we have 2 details
-  - `minItemsRequired` => minimum number of items to be available for a product to avail offer
-  - `pricePerItem` => price applicable on each of the item which can be easily changed by calling addOrUpdatePricingRules()
+  - `minItemsRequired` => minimum number of items to be available for a product to avail offer.
+  - `pricePerItem` => price applicable on each of the item which can be easily changed by calling addOrUpdatePricingRules().
   
   For example,if for ipd the number of items is greater ot equal to 5 then to all these products price applicable would be 499.
 
