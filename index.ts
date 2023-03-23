@@ -120,7 +120,7 @@ type QuatityDiscountOffer = {
 
   // The structuring of pricing rules has been done in generic way
   // Below is the pricing rule provided in the problem statement. 
-  // To make this pricing rule generic there is offerTpe and offer(details of the offer)
+  // To make this pricing rule generic there is offerType and offer(details of the offer)
   // In case of BULK_DISCOUNT we have 2 details
   // 1. minItemsRequired => minimum number of items to be available for a product to avail offer
   // 2. pricePerItem => price applicable on each of the item which can be easily changed by calling addOrUpdatePricingRules()
@@ -128,7 +128,7 @@ type QuatityDiscountOffer = {
   // In case of QUANTITY_DISCOUNT we have 2 details
   // 1. minItemsRequired => minimum number of items to be available for a product to avail offer
   // 2. numOfItmesToApplyPriceOn =>  number of items for which the customer has to pay
-  // For example, if the customer buys 3 atv's then he will have to pay for only 2 items, if the cutomer buys 6 atv's
+  // For example, if the customer buys 3 atv's then he will have to pay for only 2 items, if the customer buys 6 atv's
   // then he will have to pay for 4 items, and if the customer buys 5 atv's then he will have to pay for 4 items (Explaination => 
   // for 3 itmes he will pay price of 2 itmes and for remaining 2 items he will have to pay as usual)
   const pricingRules : Record<string, PricingRule> ={

@@ -40,7 +40,7 @@ After completion of the project there will be a fully functional checkout system
 ### 1. Pricing rules
 
   The structuring of pricing rules has been done in generic way.
-  To make this pricing rule generic there is offerTpe and offer(details of the offer).
+  To make this pricing rule generic there is offerType and offer(details of the offer).
 
   OfferType can be of 2 types
   - BULK_DISCOUNT
@@ -52,11 +52,11 @@ After completion of the project there will be a fully functional checkout system
   
   For example,if for ipd the number of items is greater ot equal to 5 then to all these products price applicable would be 499.
 
-  In case of `QUANTITY_DISCOUNT` we have 2 details
-  - `minItemsRequire`d => minimum number of items to be available for a product to avail offer.
+  In case of `QUANTITY_DISCOUNT` we have 2 details:
+  - `minItemsRequired` => minimum number of items to be available for a product to avail offer.
   - `numOfItmesToApplyPriceOn` =>  number of items for which the customer has to pay.
   
-  For example, if the customer buys 3 atv's then he will have to pay for only 2 items, if the cutomer buys 6 atv's
+  For example, if the customer buys 3 atv's then he will have to pay for only 2 items, if the customer buys 6 atv's
   then he will have to pay for 4 items, and if the customer buys 5 atv's then he will have to pay for 4 items. (Explaination => 
   for 3 itmes he will pay price of 2 itmes and for remaining 2 items he will have to pay as usual).
 ```ruby
@@ -106,7 +106,7 @@ test.addOrUpdatePricingRules({ipd:{offerType: 'QUANTITY_DISCOUNT', offer: {
     numOfItmesToApplyPriceOn: 3
 }}})
 ```
-- `changePrice`> to change price of an item if needed
+- `changePrice` > to change price of an item if needed
 ```ruby
 const test5 = new Checkout(pricingRules);
 
